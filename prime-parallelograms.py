@@ -17,9 +17,24 @@ def bin_of_primes():
 
 
 def rev_bin_of_primes():
-    return 0
+    global list_of_rev_binary
+    list_of_rev_binary = []
+    for y in list_of_binary:
+        list_of_rev_binary.append(str(y)[::-1])
+    list_of_rev_binary = list(map(int, list_of_rev_binary))
+    print(list_of_rev_binary)
+
+
+def dec_of_rev_bin_of_primes():
+    global list_of_dec_of_rev_binary
+    list_of_dec_of_rev_binary = []
+    for y in range(len(list_of_rev_binary)):
+        list_of_dec_of_rev_binary.append(int(list_of_rev_binary[y],2))
+    print(list_of_rev_binary)
+
 
 n = int(input("enter number- "))
 prime_numbers(n)
 bin_of_primes()
 rev_bin_of_primes()
+dec_of_rev_bin_of_primes()
