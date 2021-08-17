@@ -29,7 +29,7 @@ def dec_of_rev_bin_of_primes():
     global list_of_dec_of_rev_binary
     list_of_dec_of_rev_binary = []
     for y in range(len(list_of_rev_binary)):
-        list_of_dec_of_rev_binary.append(int(list_of_rev_binary[y],2))
+        list_of_dec_of_rev_binary.append((list_of_rev_binary[y],2))
     print(list_of_rev_binary)
 
 
