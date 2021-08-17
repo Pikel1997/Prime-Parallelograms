@@ -40,7 +40,9 @@ def dec_of_rev_bin_of_primes():
 
 
 def subtract_arrays():
-    print(np.subtract(np.array(list_of_primes), np.array(list_of_dec_of_rev_binary)))
+    g = np.subtract(np.array(list_of_primes), np.array(list_of_dec_of_rev_binary))
+    # print(g)
+    plt.scatter(np.array(list_of_primes), g, s=1)
 
 
 n = int(input("enter number- "))
@@ -52,9 +54,8 @@ subtract_arrays()
 
 # plotting
 plt.title("Prime Parallelograms")
-plt.xlabel("Iterations/Steps")
-plt.ylabel("Numbers")
+plt.xlabel("f(p(n)")
+plt.ylabel("Prime Numbers")
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
-plt.grid()
 plt.show()
