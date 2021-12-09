@@ -19,8 +19,7 @@ def function_on_primes():
     global list_of_ret_func
     list_of_ret_func = []
     for x in list_of_primes:
-        ga = bin(x).replace("0b", "")
-        gb = str(ga)[::-1]
+        gb = str(bin(x).replace("0b", ""))[::-1]
         list_of_ret_func.append(int(str(gb), 2))
     list_of_ret_func = list(map(int, list_of_ret_func))
 
